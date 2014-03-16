@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MRProgress.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@property (nonatomic,strong)MRProgressOverlayView* progress;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -18,5 +18,6 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
+-(void)showLoading;
+-(void)hideLoading;
 @end

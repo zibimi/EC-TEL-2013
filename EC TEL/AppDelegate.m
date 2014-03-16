@@ -7,21 +7,29 @@
 //
 
 #import "AppDelegate.h"
-
-#import "MasterViewController.h"
-
+#import "MRProgress.h"
+#import "DataManager.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+-(void)showLoading{
+
+    [MRProgressOverlayView showOverlayAddedTo:self.window animated:YES];
+}
+-(void)hideLoading{
+
+    [MRProgressOverlayView dismissOverlayForView:self.window animated:YES];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[DataManager sharedMgr] setup];
+    [self showLoading];
+    
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    //UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     return YES;
 }
 							
