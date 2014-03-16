@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3400" systemVersion="13A598" minimumToolsVersion="Xcode 4.5" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Author" representedClassName="Author">
+        <attribute name="authorId" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="institute" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="papers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Content" inverseName="whoWrites" inverseEntity="Content" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="Content" representedClassName="Content">
+        <attribute name="abstract" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="contentID" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="contentType" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstAuthorID" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstAuthorName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="marked" optional="YES" attributeType="Boolean" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="scheduled" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="title" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="track" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="inPres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Presentation" inverseName="content" inverseEntity="Presentation" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <relationship name="whoWrites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="papers" inverseEntity="Author" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="Event" representedClassName="Event">
+        <attribute name="abstraction" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="detail" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="enddate" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="eventid" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="location" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="selected" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="shortTitle" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="startdate" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="title" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="event" inverseEntity="Session" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="Presentation" representedClassName="Presentation">
+        <attribute name="beginTime" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="date" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="endTime" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="pID" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="presentationTrack" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="presentationType" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="content" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Content" inverseName="inPres" inverseEntity="Content" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <relationship name="inSession" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="whatToPres" inverseEntity="Session" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="Session" representedClassName="Session">
+        <attribute name="beginTime" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="date" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="endTime" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="location" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="sID" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="sTitle" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="sType" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="event" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="sessions" inverseEntity="Event" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <relationship name="whatToPres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Presentation" inverseName="inSession" inverseEntity="Presentation" indexed="YES">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Author" positionX="-153" positionY="255" width="128" height="105"/>
+        <element name="Content" positionX="-497" positionY="153" width="128" height="210"/>
+        <element name="Event" positionX="-119" positionY="-180" width="128" height="195"/>
+        <element name="Presentation" positionX="-189" positionY="33" width="128" height="165"/>
+        <element name="Session" positionX="-504" positionY="-180" width="128" height="180"/>
+    </elements>
+</model>
