@@ -10,4 +10,4 @@ After the success of this application, the Apple release the brand new iOS 7, du
 
 good luck and may the force be with you!
 
-zibimi & gj835
+Mi Lou
