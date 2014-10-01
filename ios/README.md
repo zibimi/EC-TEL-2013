@@ -1,4 +1,4 @@
-Project
+Readme
 =======
 This is the iOS project we have done for PawsLab in Science School University of Pittsburgh about the iOS interface of Conference Navigator
 
