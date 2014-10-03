@@ -1,0 +1,148 @@
+.headerCss {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none no-repeat scroll 0 0 white;
+    border-color: #77d3ff #77d3ff -moz-use-text-color;
+    border-image: none;
+    color:77d3ff;
+    border-style: solid solid none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-width: 6px 6px medium;
+    margin: 0 auto;
+    width: 920px;
+}
+
+.mainCss {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 white;
+    border-color: -moz-use-text-color #77d3ff;
+    border-image: none;
+    border-left: 6px solid #77d3ff;
+    border-right: 6px solid #77d3ff;
+    border-style: none solid;
+    border-width: medium 6px;
+    margin: 0 auto;
+    width: 920px;
+}
+
+.footercss {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-color: -moz-use-text-color #77d3ff #77d3ff;
+    color:77d3ff;
+    border-image: none;
+    border-right: 6px solid #77d3ff;
+    border-style: none solid solid;
+    border-width: medium 6px 6px;
+    height: 20px;
+    margin: 0 auto;
+    width: 920px;
+}
+
+.submitbutton {
+    background: none repeat scroll 0 0 #13a5ec;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    overflow: visible;
+    padding: 0 15px;
+}
+
+.answerbutton {
+    background: none repeat scroll 0 0 #13a5ec;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    height: 60px;
+    width:130px;
+    line-height: 60px;
+    overflow: visible;
+    padding: 0 15px;
+}
+
+.div_margin{
+	padding:2px;
+}
+
+.font_title{
+	color: #373a3d;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.selectcss{
+	background: none repeat scroll 0 0 #EDFAFE;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #373A3D;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+    width:125px;
+    line-height: 25px;
+    overflow: visible;
+}
+
+.textcss{
+	background: none repeat scroll 0 0 #EDFAFE;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #373A3D;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    overflow: visible;
+}
+
+.radiocss{
+	background: none repeat scroll 0 0 #EDFAFE;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #373A3D;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width:125px;
+    height: 20px;
+    line-height: 3px;
+    overflow: visible;
+}
+
+.checkboxcss{
+	background: none repeat scroll 0 0 #EDFAFE;
+    border: 1px solid #0492d6;
+    border-radius: 5px;
+    color: #373A3D;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width:125px;
+    height: 20px;
+    line-height: 3px;
+    overflow: visible;
+}

@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Survey Engine</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+  </head>
+  
+  <body>
+  <div class="headerCss"></div>
+  <div class="mainCss">
+  	<div id="questionDiv">
+  		<div style="text-align:center;font-size:35px;font-weight:bold;color:77d3ff;">Create your survey form</div>
+  		<p></p>
+  		<div class="div_margin">
+	    	<span id="questionNum" class="font_title"></span>
+	    </div>
+	    <div class="font_title">
+	    	select question type:&nbsp;
+	    	<select id="type" class="selectcss" onchange="typeChange()">
+	    		<option value="1">radio</option>
+	    		<option value="2">checkbox</option>
+	    		<option value="3">drop down</option>
+	    		<option value="4">text input</option>
+	    	</select>
+	    	<div id="question">
+	    		question:&nbsp;<input id="inputQuestion" class="textcss" type="text"/>
+	    	</div>
+	    	<div id="answer">
+	    		<div id="div1">answer_1:&nbsp;<input id="inputAnswer1" class="textcss" name="inputAnswer" type="text"/>
+	    		<input type="button" value="add answer" class="submitbutton" onclick="addAnswer()"/></div>
+	    		<span id="addSpan"></span>
+	    	</div>
+	    	<p></p>
+	    	When finished one question<br / >
+	    	please click add question button
+	    	<div>
+	    		
+	    		<input type="button" value="add question" class="submitbutton" onclick="addQuestion()"/>
+	    	</div>
+	    </div>
+	    <div style="float: right;margin-top:-110px;margin-right:110px;">
+	    	<input type="button" value="Answer" class="answerbutton" onclick="doAnswer()">
+	    </div>
+    </div>
+    <div id="survey" style="display:none;">
+  		
+  	</div>
+  </div>
+  <div class="footercss"></div>
+  </body>
+</html>
