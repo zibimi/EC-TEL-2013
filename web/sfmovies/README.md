@@ -1,5 +1,12 @@
 Project Description:
 =============================
+Create a service that shows on a map where movies have been filmed in San
+Francisco. The user should be able to filter the view using autocompletion
+search.
+
+The data is available on [DataSF](http://www.datasf.org/): [Film
+Locations](https://data.sfgov.org/Arts-Culture-and-Recreation-/Film-Locations-in-San-Francisco/yitu-d5am).
+
 1. Back-end:
 Use DataSF API, and here is URL example: http://data.sfgov.org/resource/yitu-d5am.json?title=180&release_year=2013&director=Jayendra
 Use PHP cURL lib to get data and use JSON transfer data to Fron-end (search.php)
