@@ -1,0 +1,63 @@
+@CHARSET 'UTF-8';
+body,input,select,button,textarea{
+    font-size:14px;
+    font-family:"Helvetica Neue","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;;
+}
+a{
+    color:#000;
+    text-decoration:none;
+}
+h1{
+    font-size:40px;
+    font-weight:normal;
+}
+#container{
+    width:960px;
+    margin:0 auto;
+}
+.lbl{
+    display:inline-block;
+    width:100px;
+}
+.txt{
+    border:1px solid #ccc;
+    padding:5px;
+    width:200px;
+}
+#content{
+    margin:20px 0;
+    overflow:hidden;
+}
+#list{
+    width:260px;
+    float:left;
+}
+#results{
+    list-style:none;
+    padding:0;
+    border-top:1px solid #e8e8e8;
+}
+#results a{
+    display:block;
+    height:30px;
+    line-height:30px;
+    padding:0 10px;
+    border-bottom:1px solid #e8e8e8;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+#results a:hover,#results a.active{
+    background:#eee;
+}
+#map{
+    width:678px;
+    margin-left:20px;
+    float:left;
+    height:478px;
+    background:#eee;
+    border:1px solid #ccc;
+}
+.loading{
+    display:none;
+}
