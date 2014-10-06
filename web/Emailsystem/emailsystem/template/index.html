@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Language" content="en">
+
+
+<title>Email Service</title>
+
+<link href="st/reused.css" media="all" rel="stylesheet" type="text/css">
+<link href="st/public.css" media="all" rel="stylesheet" type="text/css">
+
+
+
+<meta name="description" content="Send email better, freely.">
+<script src="st/api.js" async="" type="text/javascript"></script>
+</head>
+
+
+<body class="logged_in  env-production windows  marketing">
+
+	<div class="wrapper">
+
+		<div class="header header-logged-in true" role="banner">
+			<div class="container clearfix">
+				<ul class="header-nav left" role="navigation">
+					<li class="header-nav-item explore"><a class="header-nav-link"
+						href="#"
+						data-ga-click="Header, go to explore, text:explore">EmailService</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+
+		<div class="site clearfix" role="main">
+			<div id="site-container" class="context-loader-container"
+				data-pjax-container="">
+				<div class="pagehead">
+					<div class="container">
+						<h1>Send your Mail Freely</h1>
+						<p>We’re here to help with any questions or comments. If you
+							just want to say hi, that's cool too. using ',' for separating emails please</p>
+					</div>
+				</div>
+
+				<div class="container">
+
+
+					<div class="columns">
+						<div class="column two-thirds">
+							<div id="contact-github">
+								<div
+									class="js-write-bucket js-uploadable-container upload-enabled is-default js-upload-markdown-image"
+									data-upload-policy-url="/upload/policies/assets">
+									<form accept-charset="UTF-8" action="/api/send_mail/" method="post">
+										 {% csrf_token %}
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_name_tony">Name</label>
+											</dt>
+											<dd>
+												<input id="form_name" name="name" size="30"
+													value="EmailService" type="text" required>
+											</dd>
+										</dl>
+
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_type">Email Service</label>
+											</dt>
+											<dd>
+												<select id="form_type" name="type">
+													<option selected="selected" value="auto">Auto</option>
+													<option value="MailGun">MailGun</option>
+													<option value="SendGrid">SendGrid</option>
+												</select>
+											</dd>
+										</dl>
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_subject" maxlength="72">Subject</label>
+											</dt>
+											<dd>
+												<input id="form_subject" maxlength="72" name="subject"
+													size="72" type="text" required>
+											</dd>
+										</dl>
+
+										<div class="documentation-results-wrapper">
+											<div class="documentation-results" style="display: none"></div>
+										</div>
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_from" maxlength="72">From</label>
+											</dt>
+											<dd>
+												<input id="form_from" maxlength="72" name="from"
+													size="72" type="email" required>
+											</dd>
+										</dl>
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_to" maxlength="72">To</label>
+											</dt>
+											<dd>
+												<input id="form_to" maxlength="72" name="to" size="72"
+													type="email" required>
+												
+											</dd>
+										</dl>
+
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_cc" maxlength="72">CC</label>
+											</dt>
+											<dd>
+												<input id="form_cc" maxlength="72" name="cc" size="72"
+													type="email">
+											</dd>
+										</dl>
+
+										<dl class="form">
+											<dt class="input-label">
+												<label for="form_bcc" maxlength="72">BCC</label>
+											</dt>
+											<dd>
+												<input id="form_bcc" maxlength="72" name="bcc"
+													size="72" type="email">
+											</dd>
+										</dl>
+
+										<input class="js-contact-javascript-flag"
+											id="form_javascript_enabled" name="javascript_enabled"
+											value="true" type="hidden">
+
+
+
+										<dl class="form">
+											<dt>
+												<label for="form_body">Body</label>
+											</dt>
+											<dd>
+												<textarea
+													class="input-block js-comment-field js-quick-submit"
+													id="form_comments" name="comments"
+													placeholder="If you use 140 characters or fewer, we'll give you a gold star."
+													required="required"></textarea>
+
+											</dd>
+										</dl>
+
+										<div class="form-actions">
+											<button type="submit" class="button primary">Send
+												request</button>
+										</div>
+
+									</form>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+			<div class="modal-backdrop"></div>
+		</div>
+	</div>
+	<!-- /.wrapper -->
+
+	<div class="container">
+		<div class="site-footer" role="contentinfo"></div>
+		<!-- /.site-footer -->
+	</div>
+	<!-- /.container -->
+
+
+	<div class="fullscreen-overlay js-fullscreen-overlay"
+		id="fullscreen_overlay">
+		<div class="fullscreen-container js-suggester-container">
+			<div class="textarea-wrap">
+				<textarea name="fullscreen-contents" id="fullscreen-contents"
+					class="fullscreen-contents js-fullscreen-contents js-suggester-field"
+					placeholder=""></textarea>
+			</div>
+		</div>
+		<div class="fullscreen-sidebar">
+			<a href="#"
+				class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w"
+				aria-label="Exit Zen Mode"> <span
+				class="mega-octicon octicon-screen-normal"></span>
+			</a> <a href="#"
+				class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+				aria-label="Switch themes"> <span
+				class="octicon octicon-color-mode"></span>
+			</a>
+		</div>
+	</div>
+
+
+
+	<div id="ajax-error-message" class="flash flash-error">
+		<span class="octicon octicon-alert"></span> <a href="#"
+			class="octicon octicon-x flash-close js-ajax-error-dismiss"
+			aria-label="Dismiss error"></a> Something went wrong with that
+		request. Please try again.
+	</div>
+
+</body>
+</html>
